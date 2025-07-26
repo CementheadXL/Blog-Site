@@ -1,20 +1,3 @@
-<section class="video-banner">
-    <video id="bannerVideo" autoplay loop muted playsinline poster="assets/images/video-poster.jpg">
-        <source src="/videos/Ice_Cream_Social_to_Gala_Success.webm" type="video/webm">
-        <source src="/videos/Ice_Cream_Social_to_Gala_Success.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="banner-overlay">
-        <h2>Unlocking Nonprofit Potential</h2>
-        <p>Leveraging data and AI for a greater impact.</p>
-        <a href="#blog" class="button primary">Explore Insights</a>
-    </div>
-
-        <button id="unmuteButton" class="video-control-button">
-        <i class="fas fa-volume-mute"></i> Mute
-    </button>
-    </section>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,7 +8,7 @@
     <meta name="description" content="Discover how AI can empower nonprofits of all sizes, from small ice cream socials to large galas, to leverage event data for deeper donor insights and sustainable funding. By Ryan Clement." />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        </head>
+</head>
 <body class="is-preload">
 
     <div id="wrapper">
@@ -39,12 +22,30 @@
                     <li><a href="index.html#one">Home</a></li>
                     <li><a href="index.html#about">About Ryan</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
+                </ul>
             </nav>
         </header>
 
         <div id="main">
-            <section class="post-content"> <div class="container">
+            <section class="video-banner">
+                <video id="bannerVideo" autoplay loop playsinline poster="assets/images/video-poster.jpg">
+                    <source src="/videos/Ice_Cream_Social_to_Gala_Success.webm" type="video/webm">
+                    <source src="/videos/Ice_Cream_Social_to_Gala_Success.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="banner-overlay">
+                    <h2>Unlocking Nonprofit Potential</h2>
+                    <p>Leveraging data and AI for a greater impact.</p>
+                    <a href="#blog" class="button primary">Explore Insights</a>
+                </div>
+
+                <button id="unmuteButton" class="video-control-button">
+                    <i class="fas fa-volume-mute"></i> Mute
+                </button>
+            </section>
+            <section class="post-content">
+                <div class="container">
                     <h1>AI for All Sizes in Nonprofits: How Prospect Researchers Can Lead the Way</h1>
                     <p class="post-meta">Published by Ryan Clement on July 25, 2025</p>
 
@@ -82,8 +83,6 @@
                 </div>
             </section>
         </div>
-
-        </div>
-
+    </div>
     </body>
 </html>
