@@ -1,13 +1,19 @@
 <section class="video-banner">
-    <<video autoplay loop playsinline poster="assets/images/video-poster.jpg">
+    <video id="bannerVideo" autoplay loop muted playsinline poster="assets/images/video-poster.jpg">
+        <source src="/videos/Ice_Cream_Social_to_Gala_Success.webm" type="video/webm">
         <source src="/videos/Ice_Cream_Social_to_Gala_Success.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+
     <div class="banner-overlay">
         <h2>Unlocking Nonprofit Potential</h2>
         <p>Leveraging data and AI for a greater impact.</p>
         <a href="#blog" class="button primary">Explore Insights</a>
-    </div>
+    
+        <button id="unmuteButton" class="video-control-button">
+            <i class="fas fa-volume-mute"></i> Mute
+        </button>
+        </div>
 </section>
 <!DOCTYPE HTML>
 <html>
@@ -18,6 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Discover how AI can empower nonprofits of all sizes, from small ice cream socials to large galas, to leverage event data for deeper donor insights and sustainable funding. By Ryan Clement." />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         </head>
 <body class="is-preload">
 
