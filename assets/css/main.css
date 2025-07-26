@@ -23,13 +23,11 @@ section, summary, time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
-}
+    vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    display: block;
-}
+    display: block;}
 
 body {
     line-height: 1;
@@ -1131,7 +1129,7 @@ input, select, textarea {
                 padding: 0;
             }
 
-    }
+    } /* <--- THIS IS THE MISSING CLOSING BRACE THAT WAS THE PROBLEM */
     .video-banner {
     position: relative;
     width: 100%;
