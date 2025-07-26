@@ -27,9 +27,11 @@
         </header>
 
         <div class="video-banner">
-        <video id="bannerVideo" autoplay loop playsinline> <source src="videos/Ice_Cream_Social_to_Gala.mp4" type="video/mp4">
-          <source src="videos/Ice_Cream_Social_to_Gala.webm" type="video/webm"> Your browser does not support the video tag.
-        </video>
+        <video id="bannerVideo" autoplay loop muted playsinline poster="assets/images/video-poster.jpg">
+    <source src="videos/Ice_Cream_Social_to_Gala.mp4" type="video/mp4">
+    <source src="videos/Ice_Cream_Social_to_Gala.webm" type="video/webm">
+    Your browser does not support the video tag.
+</video>
         
         <div class="banner-overlay">
             <h2>Unlocking Nonprofit Potential</h2>
@@ -38,7 +40,7 @@
         </div>
 
         <button id="unmuteButton" class="video-control-button">
-            <i class="fas fa-volume-mute"></i> Mute
+            <i class="fas fa-volume-mute"></i> mute
         </button>
         </div>
   </div>
@@ -89,17 +91,19 @@
 
         if (video && unmuteButton) { // Check if elements exist
             function updateButtonState() {
-                if (video.muted) {
-                    unmuteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute';
-                } else {
-                    unmuteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute';
+                if (video.muted) { // If the video is CURRENTLY MUTED
+                    unmuteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute'; // Button offers to UNMUTE
+                } else { // If the video is CURRENTLY UNMUTED
+                    unmuteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute'; // Button offers to MUTE
                 }
             }
-            updateButtonState(); // Set initial state
+            updateButtonState(); // Call this once to set the initial state (e.g., "Unmute")
+
             unmuteButton.addEventListener('click', function() {
-                video.muted = !video.muted; // Toggle
-                updateButtonState(); // Update text/icon
+                video.muted = !video.muted; // Toggle the muted property
+                updateButtonState(); // Update button text/icon based on new state
             });
+
             video.addEventListener('volumechange', updateButtonState); // Keep button in sync
         }
     });
