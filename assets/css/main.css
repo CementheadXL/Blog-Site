@@ -3319,7 +3319,10 @@ input, select, textarea {
   width: 100%;
   padding-top: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
+  max-height: 500px; /* <--- ADD THIS LINE HERE */
 }
+
+/* ... rest of your CSS 
 
 .video-banner video {
   position: absolute;
