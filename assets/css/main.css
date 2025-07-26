@@ -3343,9 +3343,9 @@ input, select, textarea {
     position: absolute; /* Position it relative to the .video-banner */
     bottom: 20px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(13, 12, 12, 0.5); /* Semi-transparent background */
+    color: rgb(9, 0, 0);
+    border: 1px solid rgba(10, 0, 0, 0.7);
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -3355,8 +3355,8 @@ input, select, textarea {
 }
 
 .video-control-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-color: white;
+    background-color: rgba(252, 247, 247, 0.7);
+    border-color: rgb(15, 1, 1);
 }
 
 .video-control-button i {

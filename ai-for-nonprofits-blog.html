@@ -84,5 +84,33 @@
             </section>
         </div>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('bannerVideo');
+        const unmuteButton = document.getElementById('unmuteButton');
+
+        if (video && unmuteButton) { // Check if elements exist
+            function updateButtonState() {
+                if (video.muted) {
+                    unmuteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute';
+                } else {
+                    unmuteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute';
+                }
+            }
+
+            // Set initial state of button (e.g., "Mute" icon if video is muted)
+            updateButtonState();
+
+            // Add event listener for button click
+            unmuteButton.addEventListener('click', function() {
+                video.muted = !video.muted; // Toggle the muted property
+                updateButtonState(); // Update button text/icon
+            });
+
+            // Optional: Listen for when video itself becomes unmuted/muted (e.g., if user controls system volume)
+            video.addEventListener('volumechange', updateButtonState);
+        }
+    });
+</script>
     </body>
 </html>
