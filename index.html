@@ -664,7 +664,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
   </div>
 </section>
 			</div>
-
+section id="titleBar">
+  <a href="#header" class="toggle"></a>
+  <span class="title">Blog-Sense by Ryan Clement</span>
+</section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('bannerVideo');
+        const unmuteButton = document.getElementById('unmuteButton');
+        if (video && unmuteButton) {
+          function updateButtonState() {
+            if (video.muted) {
+              unmuteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute';
+            } else {
+              unmuteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute';
+            }
+          }
+          updateButtonState();
+          unmuteButton.addEventListener('click', function() {
+            video.muted = !video.muted;
+            updateButtonState();
+          });
+          video.addEventListener('volumechange', updateButtonState);
+        }
+      });
+    </script>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
