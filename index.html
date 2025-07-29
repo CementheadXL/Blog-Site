@@ -77,11 +77,20 @@
 						<!-- One -->
 							<section id="one">
   <div class="video-banner">
-    <video autoplay muted loop playsinline>
-      <source src="videos/Blog_Sense_Banner.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+          <video id="bannerVideo" autoplay loop muted playsinline poster="assets/images/Blog-poster.png">
+            <source src="videos/Blog_Sense_Banner.mp4" type="video/mp4">
+            <source src="videos/Blog_Sense_Banner.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <div class="banner-overlay">
+            <h2>Unlocking Nonprofit Potential</h2>
+            <p>Leveraging data and AI for a greater impact.</p>
+            <a href="#blog" class="button primary">Explore Insights</a>
+          </div>
+          <button id="unmuteButton" class="video-control-button">
+            <i class="fas fa-volume-mute"></i> mute
+          </button>
+        </div>
   <div class="container">
 
   <header class="major">
