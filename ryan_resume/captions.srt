@@ -1,6 +1,6 @@
 1
-00:00:02.000 --> 00:00:04.500
+00:00:01.000 --> 00:00:03.000
 Success isn't about one person reaching the summit.
 
-00:00:05.000 --> 00:00:08.00
+00:00:04.000 --> 00:00:08.000
 It's about making sure we all see the view.
