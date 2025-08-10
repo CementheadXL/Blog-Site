@@ -10,7 +10,9 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blog-sense.com/ryan_resume" />
   <meta name="theme-color" content="#0b1220" />
-
+  <!-- Prevent search engine indexing -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://blog-sense.com/ryan_resume" />
   <style>
     :root{--bg:#0b1220;--ink:#e8edf7;--muted:#a8b3c7;--accent:#ffd34f;--card:#121a2b;--ring: rgba(255, 211, 79, 0.35);--maxw: 920px;--radius: 18px;--shadow: 0 8px 28px rgba(0,0,0,.35)}
     *{box-sizing:border-box}
@@ -42,61 +44,37 @@
   </style>
 </head>
 <body>
-  <section class="hero">
-  <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-    <div>
+  <main class="wrap">
+    <section class="hero">
       <span class="badge">APRA 2025 • Baltimore</span>
       <h1 class="name">Ryan Clement</h1>
       <p class="tag">Prospect Intelligence • AI • Analytics</p>
       <div class="cta">
-        <a class="btn btn-accent" href="/ryan_resume/ryan_clement_resume.pdf" download>Download Résumé</a>
+        <a class="btn btn-accent" href="/ryan_resume/resume.pdf" download>Download Résumé</a>
         <a class="btn" href="mailto:rjclem@gmail.com">Email Me</a>
         <a class="btn" href="tel:+12162554719">Call</a>
-        <a class="btn" href="https://www.linkedin.com/in/ryanjclement" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/in/ryanclementoh" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-    </div>
-    <div>
-      <img src="/ryan_resume/LinkedInProfilePic.jpg" alt="Ryan Clement headshot" 
-           style="width:120px; height:120px; object-fit:cover; border-radius:50%; border:2px solid var(--accent);">
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="section">
-  <div class="section-title">
-    <h2>Short Intro Video</h2>
-    <div class="rule"></div>
-  </div>
-  <p class="section-sub"></p>
-
-  <div class="video-card">
-    <div class="ratio">
-      <video id="introVideo"
-             src="/ryan_resume/Video_Landing_Spot.mp4"
-             playsinline
-             muted
-             autoplay
-             loop
-             controls>
-        <!-- Use WebVTT; SRT isn't reliably supported in browsers -->
-        <track src="/ryan_resume/captions.vtt"
-               kind="captions"
-               srclang="en"
-               label="English"
-               default>
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
-
+      <div class="section-title"><h2>Short Intro Video</h2><div class="rule"></div></div>
+      <p class="section-sub">10–15 seconds • Who I help • What results I deliver.</p>
+      <div class="video-card">
+        <div class="ratio">
+          <video id="introVideo" src="/ryan_resume/Video_Landing_Spot.mp4" playsinline muted autoplay loop controls>
+            <track src="/ryan_resume/captions.vtt" kind="captions" srclang="en" label="English" default>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
     </section>
 
     <section class="section">
       <div class="section-title"><h2>About Me</h2><div class="rule"></div></div>
       <article class="card prose">
-        <p>I help organizations find, prioritize, and engage high-value prospects using data, AI, and practical go-to-market strategy. I’ve built prospect engines that uncovered hundreds of millions in gift capacity, accelerated pipeline movement, and turned stalled portfolios into active conversations.</p>
-        <p>Core strengths: prospect intelligence, predictive scoring, portfolio management strategy, and executive-ready analysis. I value simple systems, fast iteration, and measurable results.</p>
+        <p>Team-of-one leading Prospect Management and Research for a $350M capital campaign — the largest in our institution’s history. Designed and executed data-driven strategies that have powered a 3× increase in fundraising revenue since joining the team.</p>
+        <p>Two biggest fundraising years in the organization’s 100+ year history by integrating predictive analytics, wealth screening, and actionable intelligence into frontline strategies. Expert at uniting AI-driven prospecting with the cultural values that sustain long-term donor relationships.</p>
       </article>
     </section>
 
@@ -112,7 +90,7 @@
       <div class="section-title"><h2>Quick Links</h2><div class="rule"></div></div>
       <div class="card" role="list">
         <ul style="margin:0;padding-left:18px;line-height:1.8">
-          <li><a href="/ryan_resume/ryan_clement_resume.pdf" download>Download my résumé (PDF)</a></li>
+          <li><a href="/ryan_resume/resume.pdf" download>Download my résumé (PDF)</a></li>
           <li><a href="mailto:rjclem@gmail.com">Request a 15-minute intro call</a></li>
           <li><a href="/ryan_resume#portfolio">Case snapshots (coming soon)</a></li>
         </ul>
@@ -120,12 +98,18 @@
     </section>
 
     <footer>
-        <blockquote style="font-style: italic; font-size: 0.9em; margin-top: 2em;">
-  “The views on this website are mine alone and not those of the Cleveland Museum of Art.”
-</blockquote>
-      <small>© <span id="y"></span></small><small>-Ryan Clement</small>
+      <small>© <span id="y"></span> Ryan Clement • No employer references are included on this page. This page is not affiliated with the Cleveland Museum of Art.</small>
     </footer>
   </main>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Force captions to show by default
+    document.addEventListener('DOMContentLoaded', function(){
+      var v = document.getElementById('introVideo');
+      if (v && v.textTracks && v.textTracks.length) {
+        try { v.textTracks[0].mode = 'showing'; } catch(e) {}
+      }
+    });
+  </script>
 </body>
 </html>
