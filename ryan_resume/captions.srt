@@ -1,5 +1,6 @@
 1
-00:00:00,000 --> 00:00:07,000
-This is just the beginning — even in uncertain times, I’m ready to help your team reach the summit.
+00:00:02.000 --> 00:00:04.500
+Success isn't about one person reaching the summit.
 
-
+00:00:05.000 --> 00:00:08.00
+It's about making sure we all see the view.
